@@ -27,7 +27,7 @@ const Footer = () => {
         <p>PIAIC</p>
         <p>Full stack developers</p>
         <p>Skills is matter</p>
-        <p>Wat's going on</p>
+        <p>Wats going on</p>
       </div>
 
       <div className="space-y-4 text-sm text-gray-800 mb-6">
