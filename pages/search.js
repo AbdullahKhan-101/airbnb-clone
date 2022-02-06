@@ -5,8 +5,9 @@ import { useRouter } from "next/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
 
-const search = ({ searchResults }) => {
+const Search = ({ searchResults }) => {
   const router = useRouter();
+
   console.log(searchResults);
   const { location, startDate, endDate, noOfGuests } = router.query;
 
@@ -62,7 +63,7 @@ const search = ({ searchResults }) => {
   );
 };
 
-export default search;
+export default Search;
 
 export async function getServerSideProps() {
   const searchResults = await fetch("https://jsonkeeper.com/b/5NPS").then(
