@@ -1,5 +1,5 @@
-import { HeartIcon } from "@heroicons/react/outline";
-import { StarIcon } from "@heroicons/react/solid";
+// import { HeartIcon } from "@heroicons/react/outline";
+import { StarIcon, HeartIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React from "react";
 
@@ -13,8 +13,8 @@ const InfoCard = ({
   total,
 }) => {
   return (
-    <div className="flex py-7 px-2 border-b cursor-pointer pr-4 hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
-      <div className="relative h-24 w-40 md:w-80 md:h-52 flex-shrink-0">
+    <div className="flex flex-col md:flex-row py-7 px-2 border-b cursor-pointer pr-4 hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
+      <div className="relative md:w-80 md:h-52 flex-shrink-0 h-48 w-12/12  ">
         <Image
           src={img}
           alt="infoImg"
@@ -24,10 +24,10 @@ const InfoCard = ({
         />
       </div>
 
-      <div className="flex flex-col flex-grow pl-5">
+      <div className="flex flex-col flex-grow md:pl-5 pt-2">
         <div className="flex justify-between items-center">
           <p>{location}</p>
-          <HeartIcon className="h-7 cursor-pointer" />
+          <HeartIcon className="h-7 cursor-pointer text-red-400" />
         </div>
         <h4 className="text-xl">{title}</h4>
         <div className="border-b w-10 pt-2" />
